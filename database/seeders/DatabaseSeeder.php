@@ -17,13 +17,14 @@ class DatabaseSeeder extends Seeder
     {
         // เรียก TagSeeder
         $this->call([
+            CategorySeeder::class,
+      ProductSeeder::class,
+      UserSeeder::class,
+      OrderSeeder::class,
             TagSeeder::class,
         ]);
 
-        // สร้าง user ตัวอย่าง (ถ้าต้องการ)
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        
+        
     }
 }
